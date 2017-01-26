@@ -10,13 +10,21 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Student;
+use Illuminate\Container\Container;
 
 class WelcomeController
 {
+    /**
+     * @return mixed
+     */
     public function index()
     {
         //echo 'welcome';
         $student = Student::find(2);
-        echo $student->name;
+        $data = $student->getAttributes();
+        //echo $student->name;
+        $app = Container::getInstance();
+        $factory = $app->make('view');
+        return $factory->make('welcome')->with('data',$data);
     }
 }

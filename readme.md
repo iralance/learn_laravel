@@ -27,3 +27,6 @@ INSERT INTO `students` (`id`, `name`, `age`) VALUES
 (1, 'lee', 20),
 (2, 'mingming', 19);
 ```
+
+### v1.3 添加试图模块
+注意storage/framework/views的权限问题
