@@ -5,4 +5,11 @@
 		"illuminate/routing":"*",
 		"illuminate/events":"*"
 	}
-}```
+}
+```
+
+### v1.1 添加控制器模块
+```
+composer dump-autoload
+```
+访问host/welcome就能看到效果
