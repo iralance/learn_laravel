@@ -9,12 +9,14 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Student;
+
 class WelcomeController
 {
     public function index()
     {
-        echo 'welcome';
+        //echo 'welcome';
+        $student = Student::find(2);
+        echo $student->name;
     }
-
-
 }
